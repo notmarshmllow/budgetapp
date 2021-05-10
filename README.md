@@ -16,4 +16,4 @@ Budget App is a simple budgeting application for use with Django. It is designed
 
 `pythno3 manage.py runserver`
 
-`Visit http://127.0.0.1:8000/` in your browser
+`Visit http://127.0.0.1:8000/ in your browser.`
