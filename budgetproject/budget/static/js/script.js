@@ -14,6 +14,10 @@
 })
 
 function addNewCategory(name){
+  
+  document.querySelector('#categoriesContainer").insertAdjancentHTML('beforeend', '
+                         
+  ')
 
 }
 
