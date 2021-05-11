@@ -8,11 +8,8 @@
   e.preventDefault()
   
   var categoryName = this.value
-  
   this.value = ''
-  
   addNewCategory(categoryName) 
-  
   updateCategoriesString()
 
 })
