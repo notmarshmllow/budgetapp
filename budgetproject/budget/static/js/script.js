@@ -11,7 +11,6 @@
   this.value = ''
   addNewCategory(categoryName) 
   updateCategoriesString()
-
 })
 
 function addNewCategory(name){
