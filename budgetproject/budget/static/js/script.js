@@ -15,7 +15,7 @@
 
 function addNewCategory(name){
   
-  document.querySelector('#categoriesContainer").insertAdjancentHTML('beforeend', '
+  document.querySelector('#categoriesContainer").insertAdjacentHTML('beforeend', '
                          
   ')
 
