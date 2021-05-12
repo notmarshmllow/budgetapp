@@ -29,7 +29,7 @@ function addNewCategory(name){
 
 document.querySelectorAll('.category').forEach(function(e){
   name = e.querySelector('.name').innerHTML
-  if (name == "") return;
+  if (name == '') return;
   
   categories.push(name)
 })
