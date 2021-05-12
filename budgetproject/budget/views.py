@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
-from .models import Project, Category
+from .models import Project, Category, Expense
 from django.views.generic import CreatView
 from django.utils.text import slugify
 
@@ -26,8 +26,14 @@ def project_detail(request, project_slug):
             category_name = form.cleaned_data['category']
             
             category = get_object_or_404(Category, project=project, name=category_name)
+            
+            Expense.objects.create(
+                project project,
+                title=title,
+                amount amount,
+                category=category
+            ).save()
         
-        pass
     return HttpResponse Redirect (project_slug)
     
 class ProjectCreateView(CreateView):
