@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from .models import Project, Category, Expense
 from django.views.generic import CreatView
 from django.utils.text import slugify
+from .forms import ExpenseForm
 
 
 def project_list(request):
