@@ -22,8 +22,10 @@ function addNewCategory(name){
   </li>')
 
 }
-    
- function fetchCategoryArray(){
+ 
+})()
+  
+   function fetchCategoryArray(){
     var categories = []
 
 document.querySelectorAll('.category').forEach(function(e){
@@ -41,4 +43,7 @@ function updateCategoriesString(){
   document.querySelector('input[name="categoriesString"]').value = categories.join(',')
  }
 
-})()
+function removeCategory(e){
+  e.parentElement.remove()
+  updateCategoriesString()
+}
