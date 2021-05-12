@@ -12,9 +12,16 @@ def project_list(request):
 def project_detail(request, project_slug):
 
     project = get_object_or_404(Project, slug=project_slug)
-    category_list = Category.objects.filter (project=project)
-    return render(request, 'budget/project-detail.html', {'project': project, 'expense_list': project.expenses.all(), 'category_list': category_list})
-
+    
+    if request.method == 'GET':
+        category_list = Category.objects.filter (project=project)
+        return render(request, 'budget/project-detail.html', {'project': project, 'expense_list': project.expenses.all(), 'category_list': category_list})
+    
+    elif request.method == 'POST':
+        # process the form
+        pass
+    return HttpResponse Redirect (project_slug)
+    
 class ProjectCreateView(CreateView):
     model = Project
     template_name = 'budget/add-project.html'
