@@ -1,6 +1,6 @@
 (function(){
   
-  document.querySelector('#categoryInput').addEventListener("keydown', function(e){
+  document.querySelector('#categoryInput').addEventListener('keydown', function(e){
     if (e.keyCode != 13){
       return;
   }
@@ -20,7 +20,6 @@ function addNewCategory(name){
     <span class="name">${name}</span>
     <span onclick="removeCategory(this)" class="btnRemove bold">X</span> 
   </li>')
-
 }
  
 })()
