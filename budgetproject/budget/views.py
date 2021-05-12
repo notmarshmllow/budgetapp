@@ -26,7 +26,7 @@ class ProjectCreateView(CreateView):
         categories = self.request.POST['categoriesString'].split(',')
         for category in categories: 
             Category.objects.create(
-                project Project.objects.get(id-self.object.id),
+                project=Project.objects.get(id-self.object.id),
                 name=category
             ).save()
 
