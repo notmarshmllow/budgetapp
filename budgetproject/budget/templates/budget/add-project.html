@@ -1,11 +1,11 @@
-(% extends 'budget/base.html' %)
-(% load static %)
-(% block content %)
+{% extends 'budget/base.html' %}
+{% load static %}
+{% block content %}
 
 <div class="container">
 
 <form action="" method="POST">
-(% csrf_token %)
+{% csrf_token %}
 {{ form }}
 <label for="categoryInput">Expense Categores (hit enter after every category)</label>
 <input type="text" name="categoryInput" id="categoryInput"> 
@@ -22,4 +22,4 @@
 
 <script src="{% static 'js/script.js' %}"></script>
 
-(% endblock %)
+{% endblock %}
